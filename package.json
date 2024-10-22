@@ -23,7 +23,8 @@
   "description": "To hoc NodeJS",
   "dependencies": {
     "express": "^4.21.1",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "mongoose": "^8.7.2"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
