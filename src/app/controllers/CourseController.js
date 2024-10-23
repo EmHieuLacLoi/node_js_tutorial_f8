@@ -10,6 +10,20 @@ class CourseController {
     )
     .catch(next)
   }
+
+  // [Get] /courses/create
+  create(req, res, next) {
+    res.render('courses/create')
+  }
+
+  // [post] /courses/store
+  store(req, res, next) {
+    const formData = req.body
+    const course = new Course(formData)
+    course.save()
+    .then(() => res.redirect('/'))
+    .catch(e => res.send(e))
+  }
 }
 
 module.exports = new CourseController();
